@@ -1,0 +1,14 @@
+<div class="left-sidebar">
+    <div class="imp-links">
+        @for (impLink of impLinks; track impLink) {
+        <a href="#"><img src="{{ impLink.url }}">{{ impLink.title }}</a>
+        }
+        <a href="#">See More</a>
+    </div>
+    <div class="shortcut-link">
+        <p>Your Shortcuts</p>
+        @for (shortcut of userShortcuts; track shortcut) {
+        <a href="#"> <img src="{{shortcut.url}}">{{ shortcut.title }} </a>
+        }
+    </div>
+</div>

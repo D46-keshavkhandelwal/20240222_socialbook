@@ -1,0 +1,11 @@
+<div class="story story1">
+    <img src="{{profile_img_url}}">
+    <p>Post Story</p>
+</div>
+
+@for (story of stories; track story.id) {
+<div class="story story{{story.id}}">
+    <img src="{{story.profile_image_url}}">
+    <p>{{story.user_name}}</p>
+</div>
+}

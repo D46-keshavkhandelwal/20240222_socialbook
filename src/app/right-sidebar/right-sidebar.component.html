@@ -1,0 +1,38 @@
+<div class="right-sidebar">
+    <div class="sidebar-title">
+        <h4>Events</h4>
+        <a href="#">See All</a>
+    </div>
+    @for (event of eventsList; track event) {
+    <div class="event">
+        <div class="left-event">
+            <h3>{{event.date}}</h3>
+            <span>{{event.month}}</span>
+        </div>
+        <div class="right-event">
+            <h4>{{event.title}}</h4>
+            <p><i class="fas fa-map-marker-alt"></i>{{event.location}}</p>
+            <a href="#">More Info</a>
+        </div>
+    </div>
+    }
+    <div class="sidebar-title">
+        <h4>Advertisement</h4>
+        <a href="#">close</a>
+    </div>
+    <img src="{{ sidebarAdUrl }}" class="siderbar-ads">
+
+    <div class="sidebar-title">
+        <h4>Conversation</h4>
+        <a href="#">Hide Chat</a>
+    </div>
+
+    @for (friend of friendList; track friend) {
+    <div class="online-list">
+        <div class="online">
+            <img src="{{friend.image_url}}">
+        </div>
+        <p>{{friend.name}}</p>
+    </div>
+    }
+</div>
